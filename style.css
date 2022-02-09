@@ -1,0 +1,352 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  overflow-y: scroll;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+a:focus {
+  outline: none;
+}
+
+/* ========================================
+    全体設定
+========================================= */
+body {
+  color: rgba(82, 106, 100, 1);
+  font-size: 14px;
+  line-height: 1.4em;
+  font-family: "メイリオ", "Meiryo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  /*if content is long 
+  padding-bottom: 50px;
+  */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: rgba(39, 50, 50, 1);
+  text-decoration: none;
+}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+
+/* ========================================
+    side wrapper
+========================================= */
+div#side_wrapper {
+  width: 15%;
+  height: 100vh;
+  background-color: rgba(175, 197, 191, 1);
+  float: left;
+  position: relative;
+}
+
+div#SNS_ICONS {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+#SNS_ICONS dt {
+  margin-bottom: 20px;
+  margin-right: 5px;
+  text-align: right;
+}
+
+#SNS_ICONS span {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+#SNS_ICONS dl {
+  margin-bottom: 10px;
+  fill: rgba(39, 50, 50, 1);
+  width: 30px;
+}
+
+#SNS_ICONS svg:hover {
+  background-color: #fff103;
+}
+
+/* ========================================
+    ヘッダー
+========================================= */
+header {
+  width: 100%;
+  height: 50px;
+  padding: 25px 0;
+  position: relative;
+}
+
+div#header_inner {
+  width: 100%;
+  height: 36px;
+}
+
+/*  メニュー　*/
+header nav {
+  float: left;
+  margin: 20px;
+}
+
+header nav a:hover {
+  border-bottom: 5px solid #fff103;
+}
+header nav ul {
+  display: flex;
+}
+
+header ul li {
+  padding: 0 25px;
+}
+
+header ul li a {
+  font-size: 16px;
+  color: rgba(82, 106, 100, 1);
+}
+
+.menubtn {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menubtn {
+    display: block;
+    width: 100%;
+    max-width: 50px;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+  }
+
+  .w1000 {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+  }
+
+  nav {
+    background-color: rgba(39, 50, 50, 0.9);
+    padding: 40px 3% 10px;
+    position: absolute;
+    right: 0;
+    height: auto;
+    width: auto;
+  }
+
+  header nav ul {
+    display: block;
+  }
+
+  header nav li {
+    margin-bottom: 30px;
+  }
+
+  header nav li a {
+    color: white;
+  }
+}
+/* ========================================
+    メイン
+========================================= */
+div#main {
+  width: 100%;
+  height: 650px;
+}
+
+li#mainimage_ai img {
+  float: left;
+}
+
+div#main p {
+  font-size: 50px;
+  font-weight: 900;
+  padding-top: 200px;
+  letter-spacing: 7px;
+  line-height: 1em;
+}
+
+div#main span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+/* ========================================
+    フッター
+========================================= */
+footer {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ========================================
+    スマートフォン向け
+========================================= */
