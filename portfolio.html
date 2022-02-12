@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ポートフォリオ" />
+    <meta
+      name="keywords"
+      content="オンライン, クリエイティブ, ウェブデザイン, プログラミング, エンジニア, ポートフォリオ, マーケティング"
+    />
+    <title>Page2 Portfolio</title>
+    <!-- スタイルシートの読み込み -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+        <!-- ヘッダー　s -->
+        <header>
+          <div class="w1000">
+            <!-- メニュー　s -->
+            <p class="menubtn"><img src="bars_24.png" alt="menu" /></p>
+            <nav>
+              <ul>
+                <li>
+                  <a id="current_page" href="https://github.com/aiu27" target="_blank"
+                    >ポートフォリオ</a
+                  >
+                </li>
+                <li><a href="#">私のこと</a></li>
+                <li><a href="#">連絡する</a></li>
+                <li><a href="#">言語</a></li>
+              </ul>
+            </nav>
+            <!-- メニュー　e -->
+          </div>
+        </header>
+        <!-- ヘッダー　e -->
+
+        <!-- メインイメージ　s -->
+        <main id="m_page2">
+
+          <div>
+            <h2>イメージギャラリー</h2>
+            <p>下の画像をクリックしてください</p>
+          </div>
+      
+          <!-- The four columns -->
+          <div class="row">
+            <div class="column">
+              <img id="images" src="akachan_bancha.jpg" alt="Akachan Bancha" />
+            </div>
+            <div class="column">
+              <img id="images" src="gokugoku_wakoucha.jpg" alt="Gokugoku Wakoucha" />
+            </div>
+            <div class="column">
+              <img id="images" src="yasai_set.jpg" alt="Yasai set" />
+            </div>
+            <div class="column">
+              <img id="images" src="gentei_tokumushi.jpg" alt="Gentei Tokumushi" />
+            </div>
+            <div class="column">
+              <img id="images" src="tamaya_mizudashi_fukamushi.jpg" alt="Mizudashi Fukamushi" />
+            </div>
+          </div>
+      
+          <!---- expanding image container BEGINS ---->
+          <div class="container">
+            <span class="closebtn">&times;</span>
+            <img id="expandedImg" />
+            <div id="imgtext"></div>
+          </div>
+          <!---- expanding image container ENDS ---->
+        </main>
+        <!-- メインイメージ　e -->
+
+        <!-- フッター　s -->
+        <footer id="footer">
+          <p>Copyright (c) 2022 Ai Ueda All Rights Reserved.</p>
+        </footer>
+        <!-- フッター　e -->
+      </div>
+      <!-- right wrapper　e -->
+    </div>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+      "use strict";
+
+      $(document).ready(function () {
+        $(".menubtn").click(function () {
+          //メニューボタンをクリックしたとき
+          $("nav").toggle(300); //0.3秒で表示したり非表示にしたりする
+        });
+
+        if ($(window).width() < 768) {
+          $("nav").hide();
+        } else {
+          $("nav").show();
+        }
+
+        $(window).resize(function () {
+          if ($(window).width() < 768) {
+            $("nav").hide();
+          } else {
+            $("nav").show();
+          }
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
