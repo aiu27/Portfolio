@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ポートフォリオ" />
+    <meta
+      name="keywords"
+      content="オンライン, クリエイティブ, ウェブデザイン, プログラミング, エンジニア, ポートフォリオ, マーケティング"
+    />
+    <title>Page2 Portfolio</title>
+    <!-- スタイルシートの読み込み -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+        <!-- ヘッダー　s -->
+        <header>
+          <div class="w1000">
+            <!-- メニュー　s -->
+            <p class="menubtn"><img src="hamburger_icon.png" alt="menu" /></p>
+            <p class="menubtn_close"><img src="close_icon.png" alt="menu" /></p>
+            <nav>
+              <ul>
+                <li>
+                  <a href="index.html" target="_blank"
+                    >ホーム</a
+                  >
+                </li>
+                <li>
+                  <a id="current_page" href="portfolio.html" target="_blank"
+                    >ポートフォリオ</a
+                  >
+                </li>
+                <li><a href="#">私のこと</a></li>
+                <li><a href="#">連絡する</a></li>
+                <li><a href="#">言語</a></li>
+              </ul>
+            </nav>
+            <!-- メニュー　e -->
+          </div>
+        </header>
+        <!-- ヘッダー　e -->
+
+        <!-- メインイメージ　s -->
+        <main id="m_page2">
+
+
+          <!-- repository BEGINS -->
+          <div class="repository">
+            <h2>リポジトリー</h2>
+            <!-- row 1 -->
+            <div class="row" id="row_1">
+              <div class="column">
+                <a href="https://aiu27.github.io/E-Blast-1/" target="_blank"
+                    ><img id="images" src="eblast_1.jpg" alt="E Blast 1" />
+                </a>
+                <p>メールマガジン<br>
+                  (HTML/インラインCSS)
+                </p>
+              </div>
+              <div class="column">
+                <a href="https://aiu27.github.io/E-Blast-2/" target="_blank"
+                    ><img id="images" src="eblast_2.jpg" alt="E Blast 2" />
+                </a>
+                <p>メールマガジン<br>
+                  (HTML/インラインCSS)
+                </p>
+              </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="row" id="row_2">
+              <div class="column">
+                <a href="https://aiu27.github.io/Bank_app/" target="_blank"
+                    ><img id="images" src="bank_app.jpg" alt="Bank App" />
+                </a>
+                <p>アプリケーション<br>
+                  (HTML/CSS/JavaScript)
+                </p>
+              </div>
+              <div class="column">
+                <a href="https://aiu27.github.io/HP1/" target="_blank"
+                    ><img id="images" src="hp_1.jpg" alt="HP 1" />
+                </a>
+                <p>ホームページ<br>
+                  (HTML/CSS)
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- repository ENDS -->
+
+
+          <!-- gallery BEGINS -->
+          <div class="gallery">
+            <h2>イメージギャラリー</h2>
+            <!-- row 1 -->
+            <div class="row" id="row_1">
+              <div class="column">
+                <img id="images" src="akachan_bancha.jpg" alt="Akachan Bancha" />
+              </div>
+              <div class="column">
+                <img id="images" src="gokugoku_wakoucha.jpg" alt="Gokugoku Wakoucha" />
+              </div>
+              <div class="column">
+                <img id="images" src="yasai_set.jpg" alt="Yasai set" />
+              </div>
+              <div class="column">
+                <img id="images" src="gentei_tokumushi.jpg" alt="Gentei Tokumushi" />
+              </div>
+              <div class="column">
+                <img id="images" src="tamaya_mizudashi_fukamushi.jpg" alt="Mizudashi Fukamushi" />
+              </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="row" id="row_2">
+              <div class="column">
+                <img id="images" src="mizutama_tsushin.jpg" alt="Mizutama Tsushin" />
+              </div>
+              <div class="column">
+                <img id="images" src="onkatsu_graph_1.jpg" alt="Onkatsu Graph Front" />
+              </div>
+              <div class="column">
+                <img id="images" src="onkatsu_graph_2.jpg" alt="Onkatsu Graph Back" />
+              </div>
+              
+            </div>
+          </div>
+          <!-- gallery ENDS -->
+      
+          <!---- expanding image container BEGINS ---->
+          <div class="container">
+            <span class="closebtn">&times;</span>
+            <img id="expandedImg" />
+            <div id="imgtext"></div>
+          </div>
+          <!---- expanding image container ENDS ---->
+        </main>
+        <!-- メインイメージ　e -->
+
+        <!-- フッター　s -->
+        <footer id="footer">
+          <p>Copyright (c) 2022 Ai Ueda All Rights Reserved.</p>
+        </footer>
+        <!-- フッター　e -->
+      </div>
+      <!-- right wrapper　e -->
+    </div>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+      "use strict";
+
+      $(document).ready(function () {
+
+        //Execute when menubtn is clicked
+        $(".menubtn").click(function () {
+          //Show nav in 0.3 sec
+          $("nav").show(300); 
+
+          // Switch buttons 
+          $(".menubtn").hide();
+          $(".menubtn_close").show();
+    
+        });
+
+          //Execute when menubtn_close is clicked
+        $(".menubtn_close").click(function(){
+           //Hide nav in 0.3 sec
+           $("nav").hide(300); 
+
+            // Switch buttons 
+           $(".menubtn").show();
+           $(".menubtn_close").hide();
+
+        });
+
+
+        // Execute for both screen sizes
+        if ($(window).width() < 768) {
+          $("nav").hide();
+        } else {
+          $("nav").show();
+        }
+
+        // Execute for both resized screens 
+        $(window).resize(function () {
+          if ($(window).width() < 768) {
+
+            // Refresh menu button
+            $("nav").hide();
+            $(".menubtn").show();
+            $(".menubtn_close").hide();
+            
+          } else {
+            $("nav").show();
+          }
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
